@@ -1,0 +1,278 @@
+/* Variables para ser utilizadas en cualquier tipo de clase para mantener el mismo patron o para mantener el color */
+:root {
+    --blanco: #fff;
+    --Oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757577;
+    --grisClaro: #dfe9f3;
+}
+html {
+    font-size: 62.5%;  /*Se usa para determinar le tamaño de la pagina web*/
+    box-sizing: border-box; /*Para determinar los limites de la pagina web en un cuadrado*/
+    /* scroll-snap-type: Y mandatory; Se usa para cuando se haga scroll se pueda realizar saltos de un solo golpe */
+}
+/* Se utiliza para poder aplicar dos acciones a dos clases sin tener que reescribir el codigo, es como un codigo base para que funcione en diferentes funciones. */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    font-size: 16px; /*Determina el tamaño de pixeles de la pagina*/
+    font-family: 'krub',sans-serif; /*Se usa para utilizar el tipo de funte que se quiere para las letras de la pagina web*/
+    background-image: linear-gradient(to top, var(--grisClaro) 0%, var(--blanco) 100%); /*Se utiliza para ponerle color al fondo de la pagina web con un color que se va degradando en diferentes colores*/
+}
+h1 {
+    font-size: 3.8rem; /*Tamaño de las letras que tenga el titulo principal*/
+}
+h2 {
+    font-size: 2.8rem; /*Tamaño de las letras que tenga el titulo secundarios*/
+}
+h3 {
+    font-size: 1.8rem; /*Tamaño de las letras que tenga el titulo tercero*/
+}
+h1,h2,h3 {
+    text-align: center; /*Para centrar todos los titulos*/
+}
+.titulo span {
+    font-size: 2rem; /*Para agregar tamaño al titulo diferente al principal*/
+}
+.contenedor {
+    max-width: 120rem; /*Para agregar el tamaño de 1200px al contenedor dentro de la pagina web*/
+    margin: 0 auto;  /*Para centrar el contendor para que este ubicado en el centro del body y html*/
+}
+.navegacion-principal {
+    display: flex; /**Se usa para agregar la herramientas flex que lo ubica en columnas una al lado de la otra*/
+    flex-direction: column; /*Para poner el tipo de direccion que quieres los elementos en columnas*/
+}
+@media (min-width: 768px){  /*Se usa los media query para que funcione en diferentes dispositivos como pc y movil */
+    .navegacion-principal {
+        flex-direction: row; /*Para poner los elementos en posiciones de filas uno encima del otro*/
+        justify-content: space-between; /*Para acomodar las objetos en diferentes pociciones pero con la misma distancia*/
+    }
+}
+.navegacion-principal a {
+    display: block; /*Para que el elemento este fijo en una posicion y ocupe toda su posicion*/
+    text-align: center; /*Para que el texto este en el centro*/
+    text-decoration: none; /*Para eliminar las lineas que tenga en la parte de abajo. Quitar la decoracion*/
+    color: var(--blanco); /*Para agregar color a las letras**/
+    font-size: 2rem; /*Para agregar tamaño a las letras seleccionadas*/
+    font-weight: bold; /*Para que las letras se pongan en negritas bold o 700*/
+    padding: 1rem; /*Para agregar una separacion entre las palabras y las otras*/
+}
+.navegacion-principal a:hover { /*Se agrega hover para agregar una interaccion a los elementes*/
+    background-color: var(--primario); /*Para agregar color al fonde del elemento seleccionado*/
+    color: var(--Oscuro); /*Para agregar color a las palabras*/
+    margin: 0; /*Para eliminar el margen que ocupe el elemento*/
+}
+.hero {
+    background-image: url(../img/hero.jpg); /*Para agregar imagenes desde CSS para que pueda ser cambiada y mantener las modificaciones*/
+    background-repeat: no-repeat; /*Para que la imagen no se repita solo sea una*/
+    background-size: cover; /*Se usa para que el tamaño que ocupe no se distorcione la imagen y sea tal cual se descargo y cubra toda su posicion*/
+    height: 450px; /*La altura de la imagen donde cubre*/
+    position: relative;   /* Se usa para poner fija la imagen ya que seria el padre de contenido-herp*/
+    margin-bottom: 2rem; /*Para agregar margen en la parde de abajo*/
+}
+/*Hero es el padre.
+Contenido-hero es el hijo  Se usa - para crear un enlace de familias para poder ubicar los hijos en la posicion que uno quiera*/
+.contenido-hero {
+    position: absolute; /*Se usa para que tenga una posicion absoluta donde este la imagen como un padre*/
+    background-color: rgba(0,0,0, .65 ); /*Todas las opciones hacen que se sombre los colores agregados*/
+    background-color: rgb(0,0,0, .65 );
+    background-color: rgb( 0 0 0 / 65% ); /*Para agregar un fondo de color pero con la nomenclatura se le puede hacer mas transparente o mas oscuro */
+    width: 100%; /* Para que ocupe el 100% de su espacio*/
+    height: 100%; /*Parq que ocupe el 1005 de su altura*/
+
+    display: flex; /*Herramienta flex para trabajar en columnas o filas */
+    flex-direction: column; /*Para trabajar el flex en columnas una al aldo del otro*/
+    align-items: center;   /*Para centrar los objetos en el horizonte*/
+    justify-content: center; /*Para centrar los objetos en el vertical*/
+}
+.contenido-hero p,
+.contenido-hero h2 {
+    color: var(--blanco); /*Para agregar color a ambos elementos*/
+}
+.ubicacion {
+    display: flex; /*Para agregar la herramienta flex*/
+    align-items: flex-end; /*Para ubicar el elemento al final a la derecha de pagin web*/
+}
+.boton {
+    background-color: var(--secundario); /*Para agregar color al fondo de color*/
+    color: var(--blanco); /*Para agregar el color a las letras*/
+    text-decoration: none; /*Para eliminar las decoraciones*/
+    padding: 1rem 3rem; /* Para agregar sepaciones en el eje X y Y*/
+    font-weight: 700; /*Para poner las letas en negrita bold*/
+    font-size: 2rem; /*Para agregar el tamaño de las letras*/
+    margin-top: 2rem; /*Para agregar un margen por encima del elemento*/
+    text-transform: uppercase; /*Para que las letras se transformen en mayusculas*/
+    border-radius: .5rem; /*Para redondear los bordes del color de fondo*/
+    text-align: center; /*Para centrar el texto en el medio del elemento*/
+    width: 100%; /*Para que ocupe el 100% de su tamaño*/
+    border: none; /*Eleminar el borde de la caja o del color de fondo*/
+}
+@media (min-width: 768px){
+    .boton {
+        width: auto; /*Para que el tamaño del boton recupere su tamaño y no ocupe el 100% de su espacio*/ 
+    }
+}
+.w-sm-100 {
+    width: 100%; /*Para que el elemento ocupe el 100% DE SU espacio*/
+}
+@media (min-width: 768px){
+    .w-sm-100 {
+        width: auto; /*Para recuperar su tamaño predeterminado*/
+    }
+}
+.flex {
+    display: flex; /*Para usar la herrarmienta FLEX de trabajar los elementos en columnas o filas*/
+}
+.alinear-derecha {
+    justify-content: flex-end; /*Para ubicar los elementos al final de la derecha de la pagina*/
+}
+.nav-bg {
+    background-color: var(--secundario); /*Para agregar los colores al fondo*/
+}
+.boton:hover {
+    cursor: pointer; /*Para que el cursor del mouse recupere el dedo*/
+}
+.servicios,
+.navegacion-principal,
+.formulario {
+    scroll-snap-align: center; /* Para que el scroll se ubique en el centro de la pagina del elemento seleccionado*/
+    scroll-snap-stop: always; /*Que siempre se detenga donde este seleccionado el elemento*/
+}
+.sombra {
+    -webkit-box-shadow: 0px 0px 15px 0px rgba(112,112,112,0.62);
+    -moz-box-shadow: 0px 0px 15px 0px rgba(112,112,112,0.62);
+    box-shadow: 0px 0px 15px 0px rgba(112,112,112,0.62); /*Para agregar la sombra a un elemento usando las nomenclaras de CSS matic*/
+    background-color: var(--blanco); /*Para agregar color de fondo*/
+    border-radius: 1rem; /*Para redondear los bordes del color de fondo*/
+    padding: 1rem; /*Para agregar separacion alrededor del elemento*/
+}
+@media (min-width: 768px){
+    .servicios {
+        display: grid;/*Se usa la herramienta grid, colocando los elementos en posicion de cuadros*/
+        grid-template-columns: repeat(3, 1fr); /* Para agregar 3 columnas del mismo tamaño**/
+        column-gap: 1rem; /* Separa los cuadros de los elementos 10px*/
+    }
+}
+.servisio {
+    display: flex; /*Herramienta flex para trabajar en columnas y filas*/
+    flex-direction: column; /*Para poner los flex en direccion de columnas*/
+    align-items: center; /**Para centrar el elemento de manera horizontal*/
+}
+.servisio h3{
+    color: var(--secundario); /*Agregar color a las letras*/
+    font-weight: 400; /* Para que las letras esten de manera normal*/
+}
+.servisio p{
+    line-height: 2; /*Para agregar una separacion entre lineas*/
+    text-align: center; /*Para centrar el texto en la linea central*/
+}
+.servisio .iconos {
+    height: 15rem; /*Para agregar la altura del icono*/
+    width: 15rem; /*Para agregar el tamaño del icono*/
+    background-color: var(--primario); /*Para agregar color de fondo*/
+    border-radius: 50%; /*Para que el color de fondo se vuelva redondo*/
+    display: flex; /*para agregar la herramienta FLEX*/
+    justify-content: center; /*Para centrar el elemento vertical*/
+    align-items: center; /*Para centrar el elemento horizontal*/
+}
+.formulario {
+    background-color: var(--gris); /*Para agregar color de fondo*/
+    width: min(60rem, 100%); /*Para agregar el minimo de tamaño del formulario en la pagina web y no ocupe todo el marco*/
+    border-radius: 1rem; /*para redondear los bordes del color de fondo*/
+    margin: 0 auto; /*Para centrar el elemento que no esta en un flex y que esta en el body y html*/
+}
+.formulario fieldset {
+    border: none; /*Para eliminar los bordes*/
+}
+.formulario legend {
+    color: var(--primario); /*Para agregar colores a las letras*/
+    text-align: center; /* Para centrar el texto*/
+    font-size: 1.8rem; /*Tamaño de las letras*/
+    text-transform: uppercase; /*Para transformar las letras en mayusculas*/
+    font-weight: 700; /*Para poner las letras en negritas*/
+    margin-bottom: 2rem; /*Colocar un margen hacia abajo de los otros elementos*/
+    padding-top: 2rem; /*Para agregar una separacion hacia arriba*/
+}
+.contenedor-campo {
+    margin-bottom: 1rem; /*Para agregar un espacio hacia abajo*/
+}
+@media (min-width: 768px){
+    .contenedor-campo {
+        display: grid; /*Para agregar la herramienta grid*/
+        grid-template-columns: repeat(2, 1fr); /*Para agregar dos columnas de mismo tamaño*/
+        grid-template-rows: auto auto 20rem; /*Para agregar dos filas del mismo tamaño y una de 200px*/
+        column-gap: 1rem; /*Para darle separaciones de 10px a las columnas*/
+    }
+    .campo:nth-child(3), /*Para usar un elemento que se repite por enumeracion de repeticion*/
+    .campo:nth-child(4) {
+        grid-column: 1 / 3; /*Para ubicar el elemnto entre la primera columna y la tercera.*/
+    }
+}
+.campo label {
+    color: var(--blanco); /*Color de las letras*/
+    font-weight: 700; /*Para poner las letras en negritas*/
+    margin-bottom: .5rem; /*Para agregar borde redonde al color de fondo*/
+    display: block; /*Para que el campo se ubique en su pocision y ocupe toda su pocision fija*/
+}
+.input-text {
+    width: 100%; /*El tamaño completo del input*/
+    border: none; /*Para eliminar los bordes*/
+    padding: 1.5rem; /*Para agregar una separacion por todos los lados del elemento*/
+    border-radius: .5rem; /*Para redondear los bordes del input*/
+}
+.campo textarea {
+    height: 20rem; /*Para agregar el tamaño del texto de mensaje*/
+}
+.footer {
+    text-align: center; /*Para centrar el texto en el centro*/
+    font-weight: 700; /*Para que el texto este en negritas*/
+}
+span {
+    font-weight: bold;
+}
+.contactos-iconos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 1rem;
+    grid-template-rows: repeat(5, 1fr);
+    border: 1rem solid green;
+}
+.parrafo {
+    grid-column: 1 / 2;
+}
+.iconos1 {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    border-left: solid #212121;
+    padding: 0;
+}
+.icone {
+    background-color: var(--secundario);border-radius: 50%; padding: 10px;
+}
+.icon1 {
+    padding-left: 30%;
+}
+.icon2 {
+    padding-left: 50%;
+}
+.icon3 {
+    padding-left: 70%;
+}
+.icon4 {
+    padding-left: 90%;
+}
+.icon-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    align-items: start;
+    justify-items: start;
+    padding-left: 90rem;
+}
+   
+   .con {
+    width: 20rem; /* adjust this value to change the size of the icons */
+    height: 20rem; /* adjust this value to change the size of the icons */
+    margin-bottom: 10rem; /* adjust this value to control the space between the icons */
+   }
