@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/style.css" as="style">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="titulo">Alex Briceño <span>Freelancer</span></h1>
+    </header>
+    <nav class="nav-bg">
+        <nav class="navegacion-principal contenedor">
+            <a href="index.html">Inicio</a>
+            <a href="nosotros.html">Nosotros</a>
+            <a href="cliente.html">Clientes</a>
+            <a href="contactos.html">Contactos</a>
+        </nav>
+    </nav>
+    <Section class="hero">
+        <div class="contenido-hero">
+            <h2 class="">Diseño y Desarrollo Web <span>Freelancer</span></h2>
+            <div class="ubicacion">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-map-pin" width="88" height="88" viewBox="0 0 24 24" stroke-width="1.5" stroke="#ffec00" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                  </svg>
+                <p>Miranda, Guatire</p>
+            </div>
+            <a class="boton" href="#">Contactar</a>
+        </div>
+    </Section>
+    <main class="contenedor sombra">
+        <h2>Mis Servicios</h2>
+        
+        <section>
+            <h2>Contactos</h2>
+            <form class="formulario">
+                <fieldset>
+                    <legend>Contactanos llenando todos los campos</legend>
+                    <div class="contenedor-campo">
+                        <div class="campo">
+                            <label>Nombre</label>
+                            <input class="input-text" type="text" placeholder="Nombre">
+                        </div>
+                        <div class="campo">
+                            <label>Telefono</label>
+                            <input class="input-text" type="tel" placeholder="Telefono">
+                        </div>
+                        <div class="campo">
+                            <label>Email</label>
+                            <input class="input-text" type="email" placeholder="Email">
+                        </div>
+                        <div class="campo">
+                            <label>Mensaje</label>
+                            <textarea class="input-text"></textarea>
+                        </div>
+                    </div>
+                    <div class="flex alinear-derecha">
+                        <input class="boton w-sm-100" type="submit" value="Enviar">
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>Todos los derechos reservados. Alex Briceño Freelancer</p>
+    </footer>
+</body>
+</html>
