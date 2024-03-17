@@ -99,6 +99,8 @@ img {
 
 
 <img  src="https://github.com/Alex030396/Primer-proyecto-web/raw/main/Captura%20de%20pantalla%202024-03-17%20134144.png" alt="alex">
+<img  src="https://github.com/Alex030396/Primer-proyecto-web/raw/main/Captura%20de%20pantalla%202024-03-17%20153604.png" alt="alex">
+<img  src="https://github.com/Alex030396/Primer-proyecto-web/raw/main/Captura%20de%20pantalla%202024-03-17%20153616.png" alt="alex1">
 
 
 
