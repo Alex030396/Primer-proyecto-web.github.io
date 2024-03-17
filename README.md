@@ -97,6 +97,8 @@ img {
 <h2 align="center">Visualización del proyecto</h2>
 <p>Portada del proyecto con sus cuatro enlaces, el proyecto también tiene un formulario, que también entro en la práctica como todo lo que se puede observar si entra a la pagina de visualización. # https://alex030396.github.io/Primer-proyecto-web.github.io/ </p>
 
-![Logo de GitHub](https://github.com/Alex030396/Primer-proyecto-web/blob/main/Captura%20de%20pantalla%202024-03-17%20134144.png)
+
+<img  src="https://github.com/Alex030396/Primer-proyecto-web/raw/main/Captura%20de%20pantalla%202024-03-17%20134144.png" alt="alex">
+
 
 
